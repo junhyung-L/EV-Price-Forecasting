@@ -77,5 +77,5 @@ To capture the complex relationships in vehicle pricing, several domain-specific
 - **Junhyung L.** (Project Lead)
 
 ---
-*Refactored and polished to meet professional software engineering standards for the [Data Analyst Portfolio](https://github.com/junhyung-L).*
+*Refactored and polished to meet professional software engineering standards for the [Data Analyst Portfolio](https://github.com/junhyung-L/Resume/blob/main/Portfolio/README.md).*
 *Note: Statistical findings and feature importances are based on the actual competition report results.*
