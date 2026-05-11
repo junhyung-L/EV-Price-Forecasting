@@ -1,9 +1,18 @@
 # ⚡ EV Price Forecast Hackathon: Data-Driven Asset Valuation
 
 ## 📌 Project Overview
-As the Electric Vehicle (EV) market matures, accurate asset valuation becomes critical for consumers and manufacturers alike. This repository contains the solution for the **EV Price Forecast Hackathon** hosted by DACON. 
+As the Electric Vehicle (EV) market matures, accurate asset valuation becomes critical for consumers and manufacturers alike. This repository contains the solution for the **EV Price Forecast Hackathon** hosted by DACON.
 
-The goal is to predict EV prices based on technical specifications and market data. This project achieved an **RMSE of 0.919** (Normalized Scale) on the leaderboard using a high-precision **XGBoost-based regression model**.
+## 🚀 Executive Summary (TL;DR)
+- **The Problem**: Accurate asset valuation of Electric Vehicles (EVs) is challenging due to complex non-linear depreciation and missing critical technical specs (Battery Capacity).
+- **The Solution**: Developed a high-precision **XGBoost regression model** integrating advanced feature engineering and machine learning-based imputation.
+- **The Result**: Achieved an **RMSE of 0.919** (Normalized Scale) on the leaderboard, proving the effectiveness of the feature interactions and imputation strategy.
+
+## 🛠 Tech Stack
+![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
+![Pandas](https://img.shields.io/badge/pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white)
+![Scikit-Learn](https://img.shields.io/badge/scikit--learn-%23F7931E.svg?style=for-the-badge&logo=scikit-learn&logoColor=white)
+![XGBoost](https://img.shields.io/badge/XGBoost-EE4C2C?style=for-the-badge&logo=xgboost&logoColor=white)
 
 ---
 
@@ -31,9 +40,17 @@ To capture the complex relationships in vehicle pricing, several domain-specific
 
 ## 🤖 2. Modeling & Evaluation (모델링 및 평가)
 
-- **Algorithm**: XGBoost Regressor.
-- **Strategy**: Early stopping was used to prevent overfitting, and hyperparameters were tuned to balance bias and variance.
-- **Evaluation**: The model successfully captured the nonlinear depreciation curves of EVs.
+- **Algorithm**: **XGBoost Regressor** (Tree-based ensemble).
+- **Strategy**: 
+  - **Early Stopping**: Used to prevent overfitting by monitoring validation loss.
+  - **Hyperparameter Tuning**: Balanced tree depth and learning rate to capture complex non-linear patterns.
+- **Primary Valuation Drivers (Feature Importance)**:
+  According to the model's gain scores, the most critical factors driving EV prices were:
+  1. **Battery Capacity** (Predictive value + integrity preserved via ML imputation).
+  2. **Max Range** (Crucial utility metric for EVs).
+  3. **Brand Equity** (Interaction of Manufacturer & Model).
+
+- **Evaluation**: The model successfully captured the non-linear depreciation curves of EVs, achieving an RMSE of **0.919**.
 
 ---
 
