@@ -22,20 +22,25 @@ As the Electric Vehicle (EV) market matures, accurate asset valuation becomes cr
 
 ```mermaid
 graph TD
-    A[Raw EV Data] --> B[Missing Data Detection]
-    B --> C[Predictive Imputation <br> XGBRegressor for Battery Capacity]
-    
-    C --> D[Advanced Feature Engineering]
-    D --> D1[Vehicle Efficiency]
-    D --> D2[Mileage Ratio]
-    D --> D3[Combined Category]
-    
-    D1 --> E[Unified Feature Set]
-    D2 --> E
-    D3 --> E
-    
-    E --> F[XGBoost Regressor]
-    F --> G[Final RMSE: 0.919]
+    subgraph Inputs [1. Vehicle Specs]
+        A[Used EV Technical Specs <br> 전기차 사양 및 상태]
+    end
+
+    subgraph Pipeline [2. Domain-Driven Pipeline]
+        A --> B[Missing Data Detection]
+        B --> C[Predictive Imputation <br> XGBoost for Battery Capacity]
+        
+        C --> D[Advanced Feature Engineering <br> 전비 / 주행거리비율 / Combined]
+    end
+
+    subgraph Model [3. Prediction]
+        D --> E[XGBoost Regressor <br> 가격 예측 모델]
+        E --> F[Final Price Output]
+    end
+
+    style Inputs fill:#f9f,stroke:#333,stroke-width:2px
+    style Pipeline fill:#bbf,stroke:#333,stroke-width:2px
+    style Model fill:#bfb,stroke:#333,stroke-width:2px
 ```
 
 ---
