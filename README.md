@@ -20,6 +20,26 @@ As the Electric Vehicle (EV) market matures, accurate asset valuation becomes cr
 
 ---
 
+> ```mermaid
+graph TD
+    A[Raw EV Data] --> B[Missing Data Detection]
+    B --> C[Predictive Imputation <br> XGBRegressor for Battery Capacity]
+    
+    C --> D[Advanced Feature Engineering]
+    D --> D1[Vehicle Efficiency]
+    D --> D2[Mileage Ratio]
+    D --> D3[Combined Category]
+    
+    D1 --> E[Unified Feature Set]
+    D2 --> E
+    D3 --> E
+    
+    E --> F[XGBoost Regressor]
+    F --> G[Final RMSE: 0.919]
+```
+
+---
+
 ## 📊 1. Data & Preprocessing (데이터 및 전처리)
 The project handles a dataset containing technical specifications of various EV models. Key highlights include advanced feature engineering and machine learning-based imputation.
 
