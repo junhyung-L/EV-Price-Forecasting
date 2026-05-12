@@ -1,4 +1,8 @@
-# ⚡ EV Price Forecast Hackathon: Data-Driven Asset Valuation
+# EV Price Forecast Hackathon: Predictive Modeling for Asset Valuation
+
+[![Python 3.12](https://img.shields.io/badge/python-3.12-blue.svg)](https://www.python.org/downloads/)
+[![XGBoost](https://img.shields.io/badge/XGBoost-EE4C2C?style=flat&logo=xgboost&logoColor=white)](https://xgboost.readthedocs.io/)
+[![Status](https://img.shields.io/badge/Status-Completed-success.svg)]()
 
 ## 📌 Project Overview
 As the Electric Vehicle (EV) market matures, accurate asset valuation becomes critical for consumers and manufacturers alike. This repository contains the solution for the **EV Price Forecast Hackathon** hosted by DACON.
@@ -9,15 +13,14 @@ As the Electric Vehicle (EV) market matures, accurate asset valuation becomes cr
 - **The Result**: Achieved an **RMSE of 0.919** (Normalized Scale) on the leaderboard, proving the effectiveness of the feature interactions and imputation strategy.
 
 ## 🛠 Tech Stack
-![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
-![Pandas](https://img.shields.io/badge/pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white)
-![Scikit-Learn](https://img.shields.io/badge/scikit--learn-%23F7931E.svg?style=for-the-badge&logo=scikit-learn&logoColor=white)
-![XGBoost](https://img.shields.io/badge/XGBoost-EE4C2C?style=for-the-badge&logo=xgboost&logoColor=white)
+- **Modeling**: XGBoost Regressor
+- **Data Processing**: Pandas, NumPy
+- **Machine Learning**: Scikit-Learn (Predictive Imputation & Evaluation)
+- **Validation**: ANOVA, Pearson Correlation
 
 ---
 
 ## 📊 1. Data & Preprocessing (데이터 및 전처리)
-
 The project handles a dataset containing technical specifications of various EV models. Key highlights include advanced feature engineering and machine learning-based imputation.
 
 ### 🧠 Advanced Feature Engineering (고급 피처 엔지니어링)
@@ -39,7 +42,6 @@ To capture the complex relationships in vehicle pricing, several domain-specific
 ---
 
 ## 🤖 2. Modeling & Evaluation (모델링 및 평가)
-
 - **Algorithm**: **XGBoost Regressor** (Tree-based ensemble).
 - **Strategy**: 
   - **Early Stopping**: Used to prevent overfitting by monitoring validation loss.
@@ -79,3 +81,4 @@ To capture the complex relationships in vehicle pricing, several domain-specific
 ---
 *Refactored and polished to meet professional software engineering standards for the [Data Analyst Portfolio](https://github.com/junhyung-L/Resume/blob/main/Portfolio/README.md).*
 *Note: Statistical findings and feature importances are based on the actual competition report results.*
+
