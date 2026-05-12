@@ -20,7 +20,7 @@ As the Electric Vehicle (EV) market matures, accurate asset valuation becomes cr
 
 ---
 
-> ```mermaid
+```mermaid
 graph TD
     A[Raw EV Data] --> B[Missing Data Detection]
     B --> C[Predictive Imputation <br> XGBRegressor for Battery Capacity]
